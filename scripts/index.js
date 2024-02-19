@@ -3,7 +3,7 @@ const { resolve } = require("path");
 
 async function getCircuit(basePath) {
     const fm = createFileManager(basePath);
-    const compiled = await compile(fm, basePath);
+    const compiled = await compile(fm);
     if (!("program" in compiled)) {
         throw new Error("Compilation failed");
     }
